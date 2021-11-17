@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "508070461499",
+    "project_id": "woodbooking-262e0",
+    "storage_bucket": "woodbooking-262e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508070461499:android:59872a8aa959bdf1b1dc1e",
+        "android_client_info": {
+          "package_name": "com.example.bookingcrossfitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508070461499-kr7fngqf0m6hhpidgb574v43066f12br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi6dhpHdrnBOcTSiFFISaMJmxtD0zT8oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508070461499-kr7fngqf0m6hhpidgb574v43066f12br.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508070461499:android:317e1b3bc3fdc4d1b1dc1e",
+        "android_client_info": {
+          "package_name": "com.example.woodbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508070461499-kr7fngqf0m6hhpidgb574v43066f12br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi6dhpHdrnBOcTSiFFISaMJmxtD0zT8oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508070461499-kr7fngqf0m6hhpidgb574v43066f12br.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

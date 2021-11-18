@@ -2,12 +2,14 @@ package com.example.bookingcrossfitapp
 
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_auth.*
+import java.security.Provider
 
 class AuthActivity : AppCompatActivity() {
 
@@ -30,13 +32,33 @@ class AuthActivity : AppCompatActivity() {
                         ,passwordEditText.text.toString())
                     .addOnCompleteListener {
                         if(it.isSuccessful) {
-                            Toast.makeText(this, "Hi there! This is a Toast.", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "Hello", Toast.LENGTH_LONG).show()
+                            showHome(it.result?.user?.email ?: "")
                         } else {
                             showAlert()
                         }
                     }
             }
         }
+
+        signInButton.setOnClickListener {
+            if(emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty()) {
+                FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(
+                        (emailEditText.text.toString())
+                        ,passwordEditText.text.toString())
+                    .addOnCompleteListener {
+                        if(it.isSuccessful) {
+                            Toast.makeText(this, "Hi there! This is a Toast.", Toast.LENGTH_LONG).show()
+                            showHome(it.result?.user?.email ?: "")
+                        } else {
+                            showAlert()
+                        }
+                    }
+            }
+        }
+
+
     }
 
     private fun showAlert() {
@@ -46,6 +68,14 @@ class AuthActivity : AppCompatActivity() {
         builder.setPositiveButton("Accept", null);
         val dialog: AlertDialog = builder.create()
         dialog.show()
+    }
+
+    private fun showHome(email: String) {
+        val homeIntent = Intent(this, HomeActivity::class.java).apply {
+            putExtra("email", email)
+
+        }
+        startActivity(homeIntent)
 
     }
 

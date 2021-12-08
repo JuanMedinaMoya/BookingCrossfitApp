@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -24,14 +24,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/hitTraining"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/trainingTimeCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="30sp" />
+                android:text="7:00"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

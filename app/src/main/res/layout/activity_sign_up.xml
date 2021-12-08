@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sign_up"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintBottom_toTopOf="@+id/signUpRepeatPasswordEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
+
+        <TextView
+            android:id="@+id/signUpEmailTextView"
+            android:layout_width="250dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/signUpRepeatPasswordEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpTextView"
+            app:layout_constraintVertical_bias="0.133" />
+
+        <EditText
+            android:id="@+id/signUpEmailEditText"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            app:layout_constraintBottom_toTopOf="@+id/signUpRepeatPasswordEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpEmailTextView"
+            app:layout_constraintVertical_bias="0.063">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/signUpPasswordTextView"
+            android:layout_width="250dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/password"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText"
+            app:layout_constraintVertical_bias="0.11" />
+
+        <EditText
+            android:id="@+id/signUpPasswordEditText"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/signUpRepeatPasswordEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText"
+            app:layout_constraintVertical_bias="0.53">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/signUpRepeatPasswordTextView"
+            android:layout_width="250dp"
+            android:layout_height="23dp"
+            android:text="@string/repeat_password"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/signUpRepeatPasswordEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPasswordEditText"
+            app:layout_constraintVertical_bias="0.761" />
+
+        <EditText
+            android:id="@+id/signUpRepeatPasswordEditText"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.606">
+
+
+        </EditText>
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:text="@string/sign_up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpRepeatPasswordEditText"
+            app:layout_constraintVertical_bias="0.161" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

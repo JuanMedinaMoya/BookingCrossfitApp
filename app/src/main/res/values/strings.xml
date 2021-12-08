@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">BookingCrossfitApp</string>
+    <string name="login">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="missing_fields">Some fields are missing</string>
+    <string name="wrong_user_password">Wrong user or password</string>
+    <string name="password_dont_match">Passwords don\'t match</string>
+    <string name="not_registered_yet">Not registered yet? (Touch here)</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="email">Email</string>
+    <string name="title_activity_main">BookingCrossfitApp</string>
+    <string name="openTraining">Open</string>
+    <string name="functionalTraining">Functional</string>
+    <string name="crossTraining">Cross Training</string>
+    <string name="hitTraining">HIT Training</string>
+
+    <string name="login_fragment_label">Login Fragment</string>
+    <string name="signup_fragment_label">Signup Fragment</string>
+
 </resources>

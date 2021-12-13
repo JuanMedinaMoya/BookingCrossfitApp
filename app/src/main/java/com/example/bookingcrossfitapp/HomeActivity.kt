@@ -2,10 +2,12 @@ package com.example.bookingcrossfitapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.*
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.training.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -19,7 +21,6 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         setUpRecyclerView()
-
 
     }
 

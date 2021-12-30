@@ -14,6 +14,10 @@
             android:parentActivityName=".LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".CreateTraining"
+            android:parentActivityName=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

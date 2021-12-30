@@ -12,12 +12,15 @@ import com.example.bookingcrossfitapp.TrainingAdapter.TrainingAdapterVH
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.training.view.*
 
 
 class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         FirestoreRecyclerAdapter<Training, TrainingAdapterVH>(options) {
 
+   // val db = Firebase.firestore
     private lateinit var listener :  AdapterView.OnItemClickListener
 
     class TrainingAdapterVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -39,6 +42,7 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         holder.time.text = model.time
         holder.type.text = model.type
 
+
         holder.quitButton.setOnClickListener {
 
             if(position != RecyclerView.NO_POSITION) {
@@ -47,8 +51,22 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         }
 
         holder.joinButton.setOnClickListener {
+           // var participantes = emptyList<String>()
             if(position != RecyclerView.NO_POSITION) {
                 val userEmail = FirebaseAuth.getInstance().currentUser?.email
+
+               /* db.collection("training").document(holder.UID.toString()).get().addOnSuccessListener {
+                    if(it.exists()){
+
+                         var participantes = it.get("participants") as List<*>
+                            participantes.plusElement(userEmail.toString())
+
+                    }else{
+
+                    }
+                    db.collection("training").document(holder.UID.toString()).update("participants",participantes)
+                }*/
+
                 snapshots.getSnapshot(position).reference.update("UID", userEmail)
             }
         }

@@ -69,7 +69,17 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
+        trainingButton.setOnClickListener{
+            showCreateTraining()
+        }
 
+
+    }
+
+    private fun showCreateTraining() {
+        val createTrainingIntent = Intent(this, CreateTraining::class.java).apply {
+        }
+        startActivity(createTrainingIntent)
     }
 
     private fun showAlert() {

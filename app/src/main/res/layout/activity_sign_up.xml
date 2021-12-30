@@ -37,7 +37,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signUpTextView"
-            app:layout_constraintVertical_bias="0.133" />
+            app:layout_constraintVertical_bias="0.022" />
 
         <EditText
             android:id="@+id/signUpEmailEditText"
@@ -66,7 +66,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText"
-            app:layout_constraintVertical_bias="0.11" />
+            app:layout_constraintVertical_bias="0.053" />
 
         <EditText
             android:id="@+id/signUpPasswordEditText"
@@ -80,7 +80,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signUpEmailEditText"
-            app:layout_constraintVertical_bias="0.53">
+            app:layout_constraintVertical_bias="0.341">
 
         </EditText>
 
@@ -95,7 +95,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signUpPasswordEditText"
-            app:layout_constraintVertical_bias="0.761" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <EditText
             android:id="@+id/signUpRepeatPasswordEditText"
@@ -109,7 +109,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.606">
+            app:layout_constraintVertical_bias="0.555">
 
 
         </EditText>
@@ -122,10 +122,9 @@
             android:text="@string/sign_up"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signUpRepeatPasswordEditText"
-            app:layout_constraintVertical_bias="0.161" />
+            app:layout_constraintVertical_bias="0.32" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_create_training.*
 class CreateTraining : AppCompatActivity(){
 
+    private val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_training)
@@ -17,6 +19,38 @@ class CreateTraining : AppCompatActivity(){
         setup()
     }
     private fun setup() {
+        buttonCreateTraining.setOnClickListener {
+            if(editTextTrainingType.text.isNotEmpty() && editTextTrainingTime.text.isNotEmpty() && editTextTrainer.text.isNotEmpty() && editTextPassword.text.contentEquals("admin")){
+                var type = editTextTrainingType.text.toString()
+                var time = editTextTrainingTime.text.toString()
+                var trainer = editTextTrainer.text.toString()
 
+                db.collection("training").document().set(
+                    hashMapOf(
+                        "trainer" to trainer,
+                        "time" to time,
+                        "type" to type
+                    )
+                )
+                Toast.makeText(this, "Training added successfully", Toast.LENGTH_LONG).show()
+                showLogin()
+            }else{
+                showAlert()
+            }
+        }
+    }
+    private fun showLogin() {
+        val loginIntent = Intent(this, LoginActivity.javaClass)
+        startActivity(loginIntent)
+
+
+    }
+    private fun showAlert() {
+        val builder = AlertDialog.Builder(this);
+        builder.setTitle(("Error"))
+        builder.setMessage("Error creating training")
+        builder.setPositiveButton("Accept", null);
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }

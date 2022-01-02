@@ -24,12 +24,15 @@ class CreateTraining : AppCompatActivity(){
                 var type = editTextTrainingType.text.toString()
                 var time = editTextTrainingTime.text.toString()
                 var trainer = editTextTrainer.text.toString()
+                var participantes = mutableListOf<String>()
 
                 db.collection("training").document().set(
                     hashMapOf(
                         "trainer" to trainer,
                         "time" to time,
-                        "type" to type
+                        "type" to type,
+                        "participants" to participantes,
+                        "UID" to null
                     )
                 )
                 Toast.makeText(this, "Training added successfully", Toast.LENGTH_LONG).show()

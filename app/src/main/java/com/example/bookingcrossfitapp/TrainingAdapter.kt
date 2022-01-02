@@ -51,8 +51,13 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
             if(position != RecyclerView.NO_POSITION) {
                 snapshots.getSnapshot(position).reference.update("UID", "")
                 if (userEmail != null) {
-                    
-                    participantes?.remove(userEmail)
+                    if (participantes != null) {
+                        if(participantes.contains(userEmail)){
+                            participantes?.remove(userEmail)
+                            snapshots.getSnapshot(position).reference.update("participants", participantes)
+                        }
+                    }
+
 
                 }
             }
@@ -76,11 +81,14 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
                     db.collection("training").document(holder.UID.toString()).update("participants",participantes)
                 }*/
                 if (userEmail != null) {
-
-                    participantes?.add(userEmail)
+                    if (participantes != null) {
+                        if(!participantes.contains(userEmail))
+                            participantes?.add(userEmail)
+                        snapshots.getSnapshot(position).reference.update("participants", participantes)
+                    }
 
                 }
-                snapshots.getSnapshot(position).reference.update("participants", participantes)
+
             }
         }
     }

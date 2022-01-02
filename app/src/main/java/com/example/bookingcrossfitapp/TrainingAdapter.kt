@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookingcrossfitapp.TrainingAdapter.TrainingAdapterVH
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
@@ -41,17 +42,25 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         holder.UID.text = model.UID
         holder.time.text = model.time
         holder.type.text = model.type
+        var participantes = model.participants?.toMutableList()
 
 
         holder.quitButton.setOnClickListener {
+            val userEmail = FirebaseAuth.getInstance().currentUser?.email
 
             if(position != RecyclerView.NO_POSITION) {
                 snapshots.getSnapshot(position).reference.update("UID", "")
+                if (userEmail != null) {
+                    
+                    participantes?.remove(userEmail)
+
+                }
             }
+
         }
 
         holder.joinButton.setOnClickListener {
-           // var participantes = emptyList<String>()
+
             if(position != RecyclerView.NO_POSITION) {
                 val userEmail = FirebaseAuth.getInstance().currentUser?.email
 
@@ -66,8 +75,12 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
                     }
                     db.collection("training").document(holder.UID.toString()).update("participants",participantes)
                 }*/
+                if (userEmail != null) {
 
-                snapshots.getSnapshot(position).reference.update("UID", userEmail)
+                    participantes?.add(userEmail)
+
+                }
+                snapshots.getSnapshot(position).reference.update("participants", participantes)
             }
         }
     }

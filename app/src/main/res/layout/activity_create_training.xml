@@ -72,7 +72,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="23dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/textViewTrainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,4 +123,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTrainer" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

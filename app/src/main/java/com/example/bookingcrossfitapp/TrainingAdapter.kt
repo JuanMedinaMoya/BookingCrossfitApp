@@ -26,7 +26,7 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
 
     class TrainingAdapterVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val UID : TextView = itemView.trainingUserCardView
+        val trainer : TextView = itemView.trainingUserCardView
         val time : TextView= itemView.trainingTimeCardView
         val type : TextView = itemView.trainingTypeCardView
         val quitButton : Button = itemView.quitTrainingButton
@@ -39,7 +39,7 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
     }
 
     override fun onBindViewHolder(holder: TrainingAdapterVH, position: Int, model: Training) {
-        holder.UID.text = model.UID
+        holder.trainer.text = model.trainer
         holder.time.text = model.time
         holder.type.text = model.type
         var participantes = model.participants?.toMutableList()

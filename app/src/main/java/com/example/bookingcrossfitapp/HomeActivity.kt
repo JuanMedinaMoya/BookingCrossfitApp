@@ -1,5 +1,6 @@
 package com.example.bookingcrossfitapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -35,6 +36,10 @@ class HomeActivity : AppCompatActivity() {
 
         trainingRecyclerView.layoutManager = LinearLayoutManager(this)
         trainingRecyclerView.adapter = trainingAdapter
+
+
+
+
 
     }
 

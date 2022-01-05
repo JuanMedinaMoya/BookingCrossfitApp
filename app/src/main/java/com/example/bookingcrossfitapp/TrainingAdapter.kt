@@ -1,13 +1,17 @@
 package com.example.bookingcrossfitapp
 
+
+import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Button
+import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookingcrossfitapp.TrainingAdapter.TrainingAdapterVH
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
@@ -16,6 +20,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.training.view.*
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+
 
 
 class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
@@ -26,13 +33,31 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
 
     class TrainingAdapterVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        val card = itemView.cardViewTraining
         val trainer : TextView = itemView.trainingUserCardView
         val time : TextView= itemView.trainingTimeCardView
         val type : TextView = itemView.trainingTypeCardView
         val quitButton : Button = itemView.quitTrainingButton
         val joinButton: Button = itemView.joinTrainingButton
 
+        init{
+            itemView.setOnClickListener { v: View ->
+                val position: Int = adapterPosition
+                Toast.makeText(itemView.context,"You clicked on item #  ${position + 1}", Toast.LENGTH_SHORT).show()
+                showLogin()
+            }
+        }
+
+        private fun showLogin() {
+
+            val intent = Intent(itemView.context, LoginActivity.javaClass)
+            startActivity(itemView.context,intent,null)
+
+
+        }
+
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrainingAdapterVH {
         return TrainingAdapterVH(LayoutInflater.from(parent.context).inflate(R.layout.training,parent,false))
@@ -91,7 +116,11 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
 
             }
         }
+
+
     }
+
+
 
 
 }

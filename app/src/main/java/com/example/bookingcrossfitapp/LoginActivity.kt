@@ -36,7 +36,6 @@ class LoginActivity : AppCompatActivity() {
         //Setting key=databaseReference and value="FirebaseFirestore@18113" to the map
         SingletonMap.getInstance()[databaseReference] = db;
 
-
         setup()
 
     }

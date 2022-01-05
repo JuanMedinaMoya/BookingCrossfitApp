@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BookingCrossfitApp</string>
+    <string name="login">Entra</string>
+    <string name="sign_up">Registrate</string>
+    <string name="missing_fields">Faltan algunos campos</string>
+    <string name="wrong_user_password">Usuario o contraseña erroneos</string>
+    <string name="password_dont_match">Contraseñas no coinciden</string>
+    <string name="not_registered_yet">¿No estás registrado? (Pulse aquí)</string>
+    <string name="username">Usuario</string>
+    <string name="trainer">Entrenador:</string>
+    <string name="password">Contraseña</string>
+    <string name="repeat_password">Repita la contraseña</string>
+    <string name="email">Email</string>
+    <string name="title_activity_main">BookingCrossfitApp</string>
+    <string name="openTraining">Abrir</string>
+    <string name="functionalTraining">Funcional</string>
+    <string name="crossTraining">Cross Training</string>
+    <string name="hitTraining">HIT Training</string>
+
+    <string name="login_fragment_label">Login Fragment</string>
+    <string name="signup_fragment_label">Signup Fragment</string>
+</resources>

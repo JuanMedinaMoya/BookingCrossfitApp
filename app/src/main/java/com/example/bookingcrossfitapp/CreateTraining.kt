@@ -18,6 +18,7 @@ class CreateTraining : AppCompatActivity(){
 
         setup()
     }
+
     private fun setup() {
         buttonCreateTraining.setOnClickListener {
             if(editTextTrainingType.text.isNotEmpty() && editTextTrainingTime.text.isNotEmpty() && editTextTrainer.text.isNotEmpty() && editTextPassword.text.contentEquals("admin")){

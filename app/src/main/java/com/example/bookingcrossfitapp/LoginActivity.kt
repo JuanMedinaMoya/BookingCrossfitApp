@@ -37,9 +37,6 @@ class LoginActivity : AppCompatActivity() {
         SingletonMap.getInstance()[databaseReference] = db;
 
 
-        val prueba : FirebaseFirestore = SingletonMap.getInstance().get("databaseReference") as FirebaseFirestore;
-        val collection = prueba.collection("training").document();
-
         setup()
 
     }

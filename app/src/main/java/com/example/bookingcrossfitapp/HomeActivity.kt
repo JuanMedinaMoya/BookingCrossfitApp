@@ -37,10 +37,6 @@ class HomeActivity : AppCompatActivity() {
         trainingRecyclerView.layoutManager = LinearLayoutManager(this)
         trainingRecyclerView.adapter = trainingAdapter
 
-
-
-
-
     }
 
     override fun onStart() {

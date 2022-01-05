@@ -21,6 +21,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.training.view.*
 import android.content.Intent
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -39,6 +40,8 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         val type : TextView = itemView.trainingTypeCardView
         val quitButton : Button = itemView.quitTrainingButton
         val joinButton: Button = itemView.joinTrainingButton
+        val actualnofparticipats : TextView = itemView.textViewActualNofParticipants
+        val ofparticipants : TextView = itemView.textViewmaxNumberOfParticipants
 
         init{
             itemView.setOnClickListener { v: View ->
@@ -67,8 +70,15 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         holder.trainer.text = model.trainer
         holder.time.text = model.time
         holder.type.text = model.type
+
         var participantes = model.participants?.toMutableList()
 
+        if (participantes != null) {
+            holder.actualnofparticipats.text=  participantes.size.toString() + "/"
+        }else{
+            holder.actualnofparticipats.text = "0"
+        }
+        holder.ofparticipants.text = model.nofparticipants.toString()
 
         holder.quitButton.setOnClickListener {
             val userEmail = FirebaseAuth.getInstance().currentUser?.email
@@ -107,9 +117,18 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
                 }*/
                 if (userEmail != null) {
                     if (participantes != null) {
-                        if(!participantes.contains(userEmail))
-                            participantes?.add(userEmail)
-                        snapshots.getSnapshot(position).reference.update("participants", participantes)
+                        if(!participantes.contains(userEmail)){
+                            if(participantes.size < model.nofparticipants!!){
+                                participantes?.add(userEmail)
+                                snapshots.getSnapshot(position).reference.update("participants", participantes)
+                            }else{
+                                Toast.makeText(holder.itemView.context,"Training is full", Toast.LENGTH_SHORT).show()
+                            }
+                        }else{
+                            Toast.makeText(holder.itemView.context,"You are already in the training", Toast.LENGTH_SHORT).show()
+                        }
+
+
                     }
 
                 }

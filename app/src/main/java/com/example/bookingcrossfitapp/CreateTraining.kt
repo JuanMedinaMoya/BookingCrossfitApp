@@ -26,7 +26,9 @@ class CreateTraining : AppCompatActivity(){
                 var type = editTextTrainingType.text.toString()
                 var time = editTextTrainingTime.text.toString()
                 var trainer = editTextTrainer.text.toString()
+                var participantsnumber = editTextNumberParticipants.text.toString().toInt()
                 var participantes = mutableListOf<String>()
+
 
                 db.collection("training").document().set(
                     hashMapOf(
@@ -34,6 +36,7 @@ class CreateTraining : AppCompatActivity(){
                         "time" to time,
                         "type" to type,
                         "participants" to participantes,
+                        "nofparticipants" to participantsnumber,
                         "UID" to null
                     )
                 )

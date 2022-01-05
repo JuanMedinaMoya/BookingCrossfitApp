@@ -3,20 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="243dp"
+        android:layout_marginBottom="53dp"
         android:ems="10"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateTraining"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTrainer" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrainingPass" />
 
     <EditText
         android:id="@+id/editTextTrainingType"
@@ -24,22 +23,21 @@
         android:layout_height="0dp"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="205dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTrainingPass"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTrainingTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCreateTraining" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrainingType" />
 
     <TextView
         android:id="@+id/textViewCreateTraining"
         android:layout_width="104dp"
         android:layout_height="0dp"
         android:layout_marginTop="72dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="24dp"
         android:text="Create a training"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTrainingType"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTrainingType"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,12 +46,11 @@
         android:id="@+id/textViewTrainingType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
         android:layout_marginBottom="5dp"
         android:text="Training Type"
         app:layout_constraintBottom_toTopOf="@+id/editTextTrainingType"
         app:layout_constraintStart_toStartOf="@+id/editTextTrainingType"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCreateTraining" />
 
     <TextView
         android:id="@+id/textViewTrainingTime"
@@ -70,7 +67,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/textViewTrainer"
@@ -82,12 +79,12 @@
         android:id="@+id/textViewTrainingPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="16dp"
         android:text="Password"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCreateTraining"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTrainingType" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumberParticipants"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberParticipants" />
 
     <Button
         android:id="@+id/buttonCreateTraining"
@@ -98,13 +95,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTrainingPass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <TextView
         android:id="@+id/textViewTrainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
         android:text="Trainer"
         app:layout_constraintBottom_toTopOf="@+id/editTextTrainer"
         app:layout_constraintStart_toStartOf="@+id/editTextTrainer"
@@ -114,14 +110,37 @@
         android:id="@+id/editTextTrainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="5dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/textViewParticipantsNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTrainer" />
+
+    <TextView
+        android:id="@+id/textViewParticipantsNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="4dp"
+        android:text="Participants Number"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberParticipants"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberParticipants"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTrainer" />
+
+    <EditText
+        android:id="@+id/editTextNumberParticipants"
+        android:layout_width="135dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTrainingPass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewParticipantsNumber" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,7 +48,7 @@
 
             <TextView
                 android:id="@+id/textViewTrainertext"
-                android:layout_width="57dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
                 android:gravity="center|left"

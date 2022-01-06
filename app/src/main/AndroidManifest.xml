@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BookingCrossfitApp">
-
-
+        <activity
+            android:name=".TrainingActivity"
+            android:exported="false" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false"
@@ -37,8 +38,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

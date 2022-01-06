@@ -47,16 +47,8 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
             itemView.setOnClickListener { v: View ->
                 val position: Int = adapterPosition
                 Toast.makeText(itemView.context,"You clicked on item #  ${position + 1}", Toast.LENGTH_SHORT).show()
-                showLogin()
+
             }
-        }
-
-        private fun showLogin() {
-
-            val intent = Intent(itemView.context, LoginActivity.javaClass)
-            startActivity(itemView.context,intent,null)
-
-
         }
 
     }
@@ -71,7 +63,22 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         holder.time.text = model.time
         holder.type.text = model.type
 
+
         var participantes = model.participants?.toMutableList()
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, TrainingActivity::class.java).apply {
+                if (participantes != null) {
+                    putExtra("participants", (participantes).toTypedArray())
+                    putExtra("type", holder.type.text)
+                    putExtra("time",holder.time.text)
+                    putExtra("trainer",holder.trainer.text)
+                    putExtra("description" , model.description)
+
+                }
+            }
+            startActivity(holder.itemView.context,intent,null)
+        }
 
         if (participantes != null) {
             holder.actualnofparticipats.text=  participantes.size.toString() + "/"
@@ -80,9 +87,9 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         }
         holder.ofparticipants.text = model.nofparticipants.toString()
 
+
         holder.quitButton.setOnClickListener {
             val userEmail = FirebaseAuth.getInstance().currentUser?.email
-
             if(position != RecyclerView.NO_POSITION) {
                 snapshots.getSnapshot(position).reference.update("UID", "")
                 if (userEmail != null) {
@@ -135,6 +142,7 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
 
             }
         }
+
 
 
     }

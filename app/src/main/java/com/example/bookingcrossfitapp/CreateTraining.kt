@@ -26,6 +26,7 @@ class CreateTraining : AppCompatActivity(){
                 var type = editTextTrainingType.text.toString()
                 var time = editTextTrainingTime.text.toString()
                 var trainer = editTextTrainer.text.toString()
+                var description = editTextDescription.text.toString()
                 var participantsnumber = editTextNumberParticipants.text.toString().toInt()
                 var participantes = mutableListOf<String>()
 
@@ -37,6 +38,7 @@ class CreateTraining : AppCompatActivity(){
                         "type" to type,
                         "participants" to participantes,
                         "nofparticipants" to participantsnumber,
+                        "description" to description,
                         "UID" to null
                     )
                 )

@@ -17,6 +17,7 @@
     <string name="crossTraining">Cross Training</string>
     <string name="hitTraining">HIT Training</string>
     <string name="description">Description:</string>
+    <string name="addTraining">Trainer? Add a training</string>
     <string name="participants">Participants</string>
     <string name="login_fragment_label">Login Fragment</string>
     <string name="signup_fragment_label">Signup Fragment</string>

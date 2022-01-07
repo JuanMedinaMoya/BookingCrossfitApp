@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.CollectionReference
@@ -17,6 +18,7 @@ import com.google.firebase.firestore.model.Document
 import com.google.firebase.ktx.Firebase
 
 import kotlinx.android.synthetic.main.activity_auth.*
+import kotlinx.android.synthetic.main.training.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -36,9 +38,13 @@ class LoginActivity : AppCompatActivity() {
         //Setting key=databaseReference and value="FirebaseFirestore@18113" to the map
         SingletonMap.getInstance()[databaseReference] = db;
 
+
+
         setup()
 
     }
+
+
 
     private fun setup() {
         title = "Login"
@@ -57,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                         if(it.isSuccessful) {
                             Toast.makeText(this, "Hello " + it.result?.user?.email ?: "", Toast.LENGTH_LONG).show()
                             showHome(it.result?.user?.email ?: "")
+
                         } else {
                             showAlert()
                         }

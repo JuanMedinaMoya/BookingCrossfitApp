@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
-import android.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -27,9 +26,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
         setUpRecyclerView()
 
+
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu,menu)
@@ -51,6 +54,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setUpRecyclerView() {
+
 
         val query : Query = trainingReference.orderBy("time", Query.Direction.ASCENDING)
         val options : FirestoreRecyclerOptions<Training>  = FirestoreRecyclerOptions.Builder<Training>()

@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/cardViewTraining"
         android:layout_width="match_parent"
-        android:layout_height="214dp"
+        android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:orientation="vertical">
 
@@ -92,22 +92,28 @@
         </LinearLayout>
 
         <Space
+
             android:layout_width="match_parent"
-            android:layout_height="14dp" />
+            android:layout_height="14dp"
+            />
 
         <LinearLayout
+            android:id="@+id/userButtons"
             android:layout_width="match_parent"
-            android:layout_height="149dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <Button
                 android:id="@+id/joinTrainingButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#4CAF50"
-                android:text="Join Training" />
+                android:text="Join Training"
+                android:visibility="gone"/>
 
             <Space
+                android:id="@+id/spaceUserButtons"
                 android:layout_width="100dp"
                 android:layout_height="49dp"
                 android:layout_weight="1" />
@@ -118,7 +124,43 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#F44336"
-                android:text="Quit Training" />
+                android:text="Quit Training"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:id="@+id/editTrainingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#4CAF50"
+                android:text="Edit Training"
+                android:visibility="gone"/>
+
+            <Space
+                android:id="@+id/spaceAdminButtons"
+                android:layout_width="100dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/removeTrainingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"
+                android:text="Remove Training"
+                android:visibility="gone"/>
 
         </LinearLayout>
 

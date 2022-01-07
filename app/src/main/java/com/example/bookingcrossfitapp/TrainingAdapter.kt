@@ -35,7 +35,7 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         val time : TextView= itemView.trainingTimeCardView
         val type : TextView = itemView.trainingTypeCardView
         val quitButton : Button = itemView.quitTrainingButton
-        val joinButton: Button = itemView.editTrainingButton
+        val joinButton: Button = itemView.joinTrainingButton
         val removeButton : Button = itemView.removeTrainingButton
         val editButton : Button = itemView.editTrainingButton
         val actualnofparticipats : TextView = itemView.textViewActualNofParticipants

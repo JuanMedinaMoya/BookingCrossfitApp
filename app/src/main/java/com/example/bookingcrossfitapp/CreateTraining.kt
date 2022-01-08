@@ -43,7 +43,7 @@ class CreateTraining : AppCompatActivity(){
                     )
                 )
                 Toast.makeText(this, "Training added successfully", Toast.LENGTH_LONG).show()
-                showLogin()
+                showHome()
             }else{
                 showAlert()
             }
@@ -52,9 +52,14 @@ class CreateTraining : AppCompatActivity(){
     private fun showLogin() {
         val loginIntent = Intent(this, LoginActivity.javaClass)
         startActivity(loginIntent)
-
-
     }
+
+    private fun showHome() {
+        val homeIntent = Intent(this, HomeActivity::class.java).apply {
+        }
+        startActivity(homeIntent)
+    }
+
     private fun showAlert() {
         val builder = AlertDialog.Builder(this);
         builder.setTitle(("Error"))

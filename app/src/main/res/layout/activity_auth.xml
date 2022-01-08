@@ -16,16 +16,13 @@
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginTop="285dp"
-            android:layout_marginBottom="285dp"
             android:text="@string/username"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/trainingButton"
             app:layout_constraintEnd_toEndOf="@+id/loginEmailEditText"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/loginEmailEditText"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.71" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/loginTextView"
@@ -60,7 +57,7 @@
             android:id="@+id/loginPasswordTextView5"
             android:layout_width="0dp"
             android:layout_height="24dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="548dp"
             android:text="@string/password"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -92,10 +89,10 @@
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="4dp"
             android:text="@string/login"
-            app:layout_constraintStart_toStartOf="@+id/trainingButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
@@ -103,32 +100,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="29dp"
+            android:layout_marginBottom="104dp"
             android:clickable="true"
             android:text="@string/not_registered_yet"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trainingButton" />
-
-        <TextView
-            android:id="@+id/trainingButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="118dp"
-            android:clickable="true"
-            android:gravity="center|center_horizontal"
-            android:text="@string/addTraining"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/loginButtonNotRegistered"
-            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView"

@@ -3,13 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="Add Training"
-        android:icon="@drawable/icon_add_training"
-        android:id="@+id/addTrainingIcon"
-        app:showAsAction="always"
-        />
-
-    <item
         android:title="LogOut"
         android:icon="@drawable/icon_logout"
         android:id="@+id/logOutIcon"

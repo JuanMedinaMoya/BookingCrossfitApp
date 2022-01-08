@@ -11,7 +11,8 @@
         android:theme="@style/Theme.BookingCrossfitApp">
         <activity
             android:name=".EditTrainingActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TrainingActivity"
             android:exported="false" />
@@ -38,10 +39,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        </activity>
+
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.training.*
+import kotlinx.android.synthetic.main.training.view.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -35,16 +36,34 @@ class HomeActivity : AppCompatActivity() {
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu,menu)
+        val currentUser : String? = FirebaseAuth.getInstance().currentUser?.uid
+        FirebaseFirestore.getInstance().collection("admin")
+            .whereEqualTo("id", currentUser).get().addOnSuccessListener {
+                if(it != null && !it.isEmpty) {
+                    menuInflater.inflate(R.menu.menu,menu)
+
+                } else {
+                    menuInflater.inflate(R.menu.menu_user,menu)
+                }
+            }
+
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.logOutIcon -> logOut()
+            R.id.addTrainingIcon -> showCreateTraining()
         }
         return super.onOptionsItemSelected(item)
     }
+
+    private fun showCreateTraining() {
+        val createTrainingIntent = Intent(this, CreateTraining::class.java).apply {
+        }
+        startActivity(createTrainingIntent)
+    }
+
 
     private fun logOut() {
         FirebaseAuth.getInstance().signOut()

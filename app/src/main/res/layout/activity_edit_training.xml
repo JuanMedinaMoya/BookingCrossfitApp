@@ -111,9 +111,12 @@
                 android:id="@+id/typeEditTrainingTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
                 android:text="Training Type"
-                tools:layout_editor_absoluteX="40dp"
-                tools:layout_editor_absoluteY="109dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.122"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/participantsEditTrainingTextView"
@@ -128,13 +131,14 @@
 
             <EditText
                 android:id="@+id/descriptionEditTrainingEditText"
-                android:layout_width="307dp"
+                android:layout_width="310dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:gravity="top"
+                android:inputType="text|textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.398"
+                app:layout_constraintHorizontal_bias="0.425"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descriptionEditTrainingTextView" />
 

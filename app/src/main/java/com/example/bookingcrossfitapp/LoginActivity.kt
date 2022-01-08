@@ -72,9 +72,9 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
-        trainingButton.setOnClickListener{
+/*        trainingButton.setOnClickListener{
             showCreateTraining()
-        }
+        }*/
 
 
     }

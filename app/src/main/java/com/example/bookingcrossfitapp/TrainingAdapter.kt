@@ -84,13 +84,32 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         holder.trainer.text = model.trainer
         holder.time.text = model.time
         holder.type.text = model.type
+        holder.ofparticipants.text = model.nofparticipants.toString()
 
 
         var participantes = model.participants?.toMutableList()
 
 
+        holder.editButton.setOnClickListener {
+
+            val itemSelectedDocumentId = snapshots.getSnapshot(position).id
+            val intent = Intent(holder.itemView.context, EditTrainingActivity::class.java).apply {
+                if (participantes != null) {
+                    putExtra("type", holder.type.text)
+                    putExtra("time",holder.time.text)
+                    putExtra("trainer",holder.trainer.text)
+                    putExtra("description" , model.description)
+                    putExtra("maxParticipants", holder.ofparticipants.text)
+                    putExtra("documentId", itemSelectedDocumentId)
+                }
+            }
+            startActivity(holder.itemView.context,intent,null)
+        }
+
+
 
         holder.itemView.setOnClickListener {
+
             val intent = Intent(holder.itemView.context, TrainingActivity::class.java).apply {
                 if (participantes != null) {
                     putExtra("participants", (participantes).toTypedArray())
@@ -105,7 +124,7 @@ class TrainingAdapter(options: FirestoreRecyclerOptions<Training>) :
         }
 
         if (participantes != null) {
-            holder.actualnofparticipats.text=  participantes.size.toString() + "/"
+            holder.actualnofparticipats.text =  participantes.size.toString() + "/"
         }else{
             holder.actualnofparticipats.text = "0"
         }

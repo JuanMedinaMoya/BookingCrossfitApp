@@ -18,7 +18,7 @@
             <EditText
                 android:id="@+id/trainerEditTrainingEditText"
                 android:layout_width="210dp"
-                android:layout_height="34dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -75,7 +75,7 @@
             <EditText
                 android:id="@+id/timeEditTrainingEditText"
                 android:layout_width="208dp"
-                android:layout_height="34dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -129,7 +129,7 @@
             <EditText
                 android:id="@+id/descriptionEditTrainingEditText"
                 android:layout_width="307dp"
-                android:layout_height="61dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -141,7 +141,7 @@
             <EditText
                 android:id="@+id/participantsEditTrainingEditText"
                 android:layout_width="211dp"
-                android:layout_height="34dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -153,7 +153,7 @@
             <EditText
                 android:id="@+id/typeEditTrainingEditText"
                 android:layout_width="210dp"
-                android:layout_height="34dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookingCrossfitApp">
         <activity
+            android:name=".EditTrainingActivity"
+            android:exported="false" />
+        <activity
             android:name=".TrainingActivity"
             android:exported="false" />
         <activity
@@ -38,7 +41,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

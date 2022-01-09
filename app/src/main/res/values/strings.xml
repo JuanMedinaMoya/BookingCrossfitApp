@@ -21,5 +21,13 @@
     <string name="participants">Participants</string>
     <string name="login_fragment_label">Login Fragment</string>
     <string name="signup_fragment_label">Signup Fragment</string>
+    <string name="nofparticipants">Number of participants</string>
+    <string name="createTraining">Create a training</string>
+    <string name="trainingType">Training type</string>
+    <string name="trainingTime">Time</string>
+    <string name="quitTraining">Quit training</string>
+    <string name="joinTraining">Join training</string>
+    <string name="editTraining">Edit training</string>
+    <string name="removeTraining">Remove training</string>
 
 </resources>

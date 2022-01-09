@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditTrainingActivity"
-    android:background="@color/background">
+    android:background="#e7c483"
+    tools:context=".EditTrainingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#eec372">
 
             <EditText
                 android:id="@+id/trainerEditTrainingEditText"
@@ -34,6 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:text="@string/description"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.125"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:text="Time"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.108"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +60,9 @@
                 android:layout_width="107dp"
                 android:layout_height="46dp"
                 android:layout_marginBottom="48dp"
+                android:background="@color/button"
                 android:text="@string/common_google_play_services_update_button"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
@@ -91,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Edit Training"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +111,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="180dp"
                 android:text="@string/password"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
@@ -114,6 +124,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="84dp"
                 android:text="Training Type"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.122"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +137,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:text="@string/participants"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.122"
                 app:layout_constraintStart_toStartOf="parent"
@@ -173,6 +187,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:text="@string/trainer"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.11"
                 app:layout_constraintStart_toStartOf="parent"

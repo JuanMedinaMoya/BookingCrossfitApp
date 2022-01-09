@@ -8,4 +8,7 @@
     <color name="background">#82b6bc</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="green">#81BB9A</color>
+    <color name="violet">#818FBB</color>
+
 </resources>

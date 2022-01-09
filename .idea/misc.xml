@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/BookingCrossfitApp/app/src/main/res/layout/activity_auth.xml" value="0.25" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/BookingCrossfitApp/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/BookingCrossfitApp/app/src/main/res/layout/training.xml" value="0.15427350427350428" />
         <entry key="..\:/Users/javig/AndroidStudioProjects/BookingCrossfitApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/javig/AndroidStudioProjects/BookingCrossfitApp/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.403125" />
         <entry key="..\:/Users/javig/AndroidStudioProjects/BookingCrossfitApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23489583333333333" />
